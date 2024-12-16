@@ -7,6 +7,11 @@ app=Flask(__name__)
 def index():
     return render_template('index.html')
 
+@app.route('/home' )
+def index():
+    return render_template('index.html')
+
+
 
 @app.route('/form', methods=['GET', 'POST'])
 def form():
@@ -17,7 +22,7 @@ def form():
 
 
 
-@app.route('/submit', methods=['GET', 'POST'])
+@app.route('/submit', methods=['GET',  'POST'])
 def submit():
     if request.method=='POST':
         name=request.form['name']
